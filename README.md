@@ -2,6 +2,8 @@
 A Function Wrapper with promise-like syntax for callback chaining, using eventEmitters at its core.
 
 ## Usage
+```npm install emittable```
+
 ```javascript
 
 var Emittable = require('emittable');
