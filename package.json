@@ -25,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/RebelMail/emittable/issues"
   },
-  "homepage": "https://github.com/RebelMail/emittable"
+  "homepage": "https://github.com/RebelMail/emittable",
+  "dependencies": {}
 }

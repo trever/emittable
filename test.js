@@ -1,4 +1,5 @@
 var Emittable = require('./index.js');
+var fs = require('fs');
 
 var x = function(a, cb){
 	console.log(a);
@@ -8,8 +9,12 @@ var x = function(a, cb){
 	return;
 };
 
-var X = Emittable(x);
-// console.log(X);
-X('Welcome To Emittable. This is triggered immediately.').then(msg);
+fs
+	.readFile
+	.emit('./package.json')
+	.then(msg)
+	.catch(function(e){
+		console.log('e', arguments);
+	});
 
-function msg(msg){console.log(msg)}
+function msg(msg){console.log(msg.toString())}
