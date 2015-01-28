@@ -11,7 +11,6 @@ git clone https://github.com/RebelMail/emittable.git
 cd emittable
 npm install
 npm test
-
 ```
 
 ```javascript
