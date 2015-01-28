@@ -17,5 +17,13 @@
     "function"
   ],
   "author": "Trever Faden (@trever)",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RebelMail/emittable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RebelMail/emittable/issues"
+  },
+  "homepage": "https://github.com/RebelMail/emittable"
 }
