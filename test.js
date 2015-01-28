@@ -17,4 +17,9 @@ fs
 		console.log('e', arguments);
 	});
 
-function msg(msg){console.log(msg.toString())}
+function msg(msg){
+	setTimeout(function(){
+		console.log(msg.toString())
+	},3000);
+	console.log('Package.JSON should be stdout in 3...2...1');
+}
