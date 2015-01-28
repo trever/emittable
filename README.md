@@ -19,7 +19,7 @@ npm test
 var Emittable = require('emittable');
 
 fs.readFile
-	.emit('./README.md')
+	.emit('./package.json')
 	.then(msg)
 	.catch(function(e){
 		throw e;
