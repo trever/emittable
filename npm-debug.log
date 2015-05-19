@@ -1,0 +1,99 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.7.5
+3 info using node@v0.10.22
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/treverfaden/RebelMailCode/emittable',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/treverfaden/.npm/emittable/0.0.3/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/treverfaden/.npm/emittable/0.0.3/package.tgz',
+9 verbose tar pack   '/Users/treverfaden/RebelMailCode/emittable' ]
+10 verbose tarball /Users/treverfaden/.npm/emittable/0.0.3/package.tgz
+11 verbose folder /Users/treverfaden/RebelMailCode/emittable
+12 info prepublish emittable@0.0.3
+13 verbose addLocalTarball adding from inside cache /Users/treverfaden/.npm/emittable/0.0.3/package.tgz
+14 silly cache afterAdd emittable@0.0.3
+15 verbose afterAdd /Users/treverfaden/.npm/emittable/0.0.3/package/package.json not in flight; writing
+16 verbose afterAdd /Users/treverfaden/.npm/emittable/0.0.3/package/package.json written
+17 silly publish { name: 'emittable',
+17 silly publish   version: '0.0.3',
+17 silly publish   description: 'A Function Wrapper with promise-like syntax for callback chaining, using eventEmitters at its core',
+17 silly publish   main: 'index.js',
+17 silly publish   scripts: { test: 'node test.js' },
+17 silly publish   keywords:
+17 silly publish    [ 'event',
+17 silly publish      'emitter',
+17 silly publish      'promises',
+17 silly publish      'futures',
+17 silly publish      'fibers',
+17 silly publish      'rebelmail',
+17 silly publish      'trever',
+17 silly publish      'function' ],
+17 silly publish   author: { name: 'Trever Faden', url: '@trever' },
+17 silly publish   license: 'ISC',
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'https://github.com/RebelMail/emittable.git' },
+17 silly publish   bugs: { url: 'https://github.com/RebelMail/emittable/issues' },
+17 silly publish   homepage: 'https://github.com/RebelMail/emittable',
+17 silly publish   dependencies: {},
+17 silly publish   readme: '# Emittable\nA Function Wrapper with promise-like syntax for callback chaining, using eventEmitters at its core.\n\n## Usage\n```\nnpm install emittable\n\n- OR -\n\ngit clone https://github.com/RebelMail/emittable.git\ncd emittable\nnpm install\nnpm test\n```\n\n```javascript\n\nvar Emittable = require(\'emittable\');\n\nfs.readFile\n\t.emit(\'./package.json\')\n\t.then(msg)\n\t.catch(function(e){\n\t\tthrow e;\n\t});\n\nfunction msg(msg){console.log(msg.toString())}\n\n```\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: '613be36ac9c2e574e7c56f39365b47fdc3d96e21',
+17 silly publish   _id: 'emittable@0.0.3',
+17 silly publish   _shasum: '8bcfae4341993237c9305f0e980d477bf4b1cf30',
+17 silly publish   _from: '.' }
+18 silly mapToRegistry name emittable
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/emittable
+22 verbose publish registryBase https://registry.npmjs.org/
+23 silly publish uploading /Users/treverfaden/.npm/emittable/0.0.3/package.tgz
+24 verbose request uri https://registry.npmjs.org/emittable
+25 verbose request sending authorization for write operation
+26 info attempt registry request try #1 at 15:43:27
+27 verbose request id aa299b02db286e01
+28 http request PUT https://registry.npmjs.org/emittable
+29 http 403 https://registry.npmjs.org/emittable
+30 verbose headers { 'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=60',
+30 verbose headers   'content-length': '95',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   date: 'Tue, 19 May 2015 19:43:27 GMT',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-served-by': 'cache-atl6224-ATL',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1432064607.356803,VS0,VE342' }
+31 verbose request invalidating /Users/treverfaden/.npm/registry.npmjs.org/emittable on PUT
+32 error publish Failed PUT 403
+33 verbose stack Error: "You cannot publish over the previously published version 0.0.3." : emittable
+33 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+33 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+33 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:360:22)
+33 verbose stack     at Request.EventEmitter.emit (events.js:98:17)
+33 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1202:14)
+33 verbose stack     at Request.EventEmitter.emit (events.js:117:20)
+33 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1150:12)
+33 verbose stack     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+33 verbose stack     at _stream_readable.js:920:16
+33 verbose stack     at process._tickCallback (node.js:415:13)
+34 verbose statusCode 403
+35 verbose pkgid emittable
+36 verbose cwd /Users/treverfaden/RebelMailCode/emittable
+37 error Darwin 14.1.0
+38 error argv "node" "/usr/local/bin/npm" "publish"
+39 error node v0.10.22
+40 error npm  v2.7.5
+41 error code E403
+42 error "You cannot publish over the previously published version 0.0.3." : emittable
+43 error If you need help, you may report this error at:
+43 error     <https://github.com/npm/npm/issues>
+44 verbose exit [ 1, true ]
