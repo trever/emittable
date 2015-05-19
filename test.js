@@ -1,25 +1,39 @@
 var Emittable = require('./index.js');
 var fs = require('fs');
 
-var x = function(a, cb){
-	console.log(a);
-	setTimeout(function(){
-		cb(null, 'this is the value of your callback. Returned after 3 seconds.');
-	},3000);
+var xy = function(name, cb){
+	// console.log(a);
+	cb(null, './package.js');
 	return;
 };
 
-fs
-	.readFile
-	.emit('./package.json')
-	.then(msg)
+function msg(msgd, cb){
+	// console.log(arguments);
+	cb(null, msgd.name);
+	// cb(null, JSON.parse(msg).name)
+};
+
+
+xy.emit('magic')
+	.then(fs.readFile)
+	.then(function(file){
+		console.log(file);
+	})
 	.catch(function(e){
-		console.log('e', arguments);
+		throw(e);
+		console.log('e', e);
 	});
 
-function msg(msg){
-	setTimeout(function(){
-		console.log(msg.toString())
-	},3000);
-	console.log('Package.JSON should be stdout in 3...2...1');
-}
+// xy('magic', function(e,r){
+// 	console.log(r);
+// });
+
+// fs.readFile.emit('./package.json', 'utf8')
+// 	.then(function(name){
+// 		console.log(name);
+// 	});
+
+
+
+
+
