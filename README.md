@@ -11,7 +11,6 @@ git clone https://github.com/RebelMail/emittable.git
 cd emittable
 npm install
 npm test
-
 ```
 
 ```javascript
@@ -19,7 +18,7 @@ npm test
 var Emittable = require('emittable');
 
 fs.readFile
-	.emit('./README.md')
+	.emit('./package.json')
 	.then(msg)
 	.catch(function(e){
 		throw e;
